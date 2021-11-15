@@ -1,5 +1,4 @@
 import { useContext, createContext } from 'react'
-import { IComponentContextValue } from '../../models'
 
 // 配置参数默认值
 const initialValue = {
@@ -18,11 +17,11 @@ const initialValue = {
     setClientHeight: () => undefined
 }
 
-export const ComponentContext = createContext<IComponentContextValue>(initialValue);
+export const ComponentContext = createContext<any>(initialValue);
 export default ComponentContext
 
 // 以props形式，接受各个配置
-export function ComponentProvider(props: IComponentContextValue) {
+export function ComponentProvider(props: any) {
     const { children, ...others } = props
     // ComponentProvider嵌套使用时，获取父级的数据
     const parentContext = useContext(ComponentContext);
