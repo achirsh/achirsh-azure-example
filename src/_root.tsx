@@ -4,6 +4,7 @@ import { render } from "react-dom";
 import Index from './pages/index'
 
 render(
-    <Index />, document.getElementById("root"));
+    <Index />,
+    document.getElementById("root"));
 
 module.hot?.accept();

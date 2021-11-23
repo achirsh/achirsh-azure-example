@@ -1,5 +1,5 @@
-import { Layout as AppRouter } from '../components'
-
 export default function Index(): JSX.Element {
-    return <AppRouter />
+    return <div>
+        <img alt="" src={require('../assets/2.jpeg')} />
+    </div>
 }
